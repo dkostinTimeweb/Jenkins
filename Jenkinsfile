@@ -33,9 +33,9 @@ pipeline {
                 script {
                     sh """
                     docker run -d --name ${CONTAINER_NAME} -p 8080:8080 -p 50000:50000 \
-                    -v ${VOLUME_NAME}:/var/jenkins_home \
-                    -v ${CONFIG_DIR}:/var/jenkins_home/casc_configs \
-                    -e CASC_JENKINS_CONFIG=/var/jenkins_home/casc_configs \
+                    -v ${VOLUME_NAME}:/root/Project/jenkins_home \
+                    -v ${CONFIG_DIR}:/root/Project/jenkins_home/casc_configs \
+                    -e CASC_JENKINS_CONFIG=/root/Project/jenkins_home/casc_configs \
                     ${JENKINS_IMAGE}
                     """
                 }
