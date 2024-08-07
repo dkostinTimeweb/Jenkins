@@ -5,7 +5,7 @@ pipeline {
         JENKINS_IMAGE = 'jenkins/jenkins:lts'
         CONTAINER_NAME = 'jenkins-server'
         VOLUME_NAME = 'jenkins_home'
-        CONFIG_DIR = '/root/Project'
+        CONFIG_DIR = '/root/Project/jenkins.yaml'
     }
 
     stages {
